@@ -1,6 +1,16 @@
 module.exports = {
   siteMetadata: {
     title: "Tecwaver",
+    footerLinks: [
+      {
+        columnTitle: "关于",
+        links: [
+          { to: "", name: "" },
+          { to: "", name: "" },
+          { to: "", name: "" },
+        ],
+      },
+    ],
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -17,7 +27,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/assets/images/icon.svg",
       },
     },
     "gatsby-transformer-remark",
@@ -27,7 +37,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./src/assets/images/",
       },
       __key: "images",
     },
