@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import { FcMenu } from "react-icons/fc";
-import logo from "../assets/images/logo-long.png";
+import logo from "/src/assets/images/logo-long.png";
 
 const links = [
   { text: "首页", url: "/" },
