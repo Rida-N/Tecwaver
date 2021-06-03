@@ -29,7 +29,7 @@ const IndexPage = () => {
                 <span style={{ marginRight: "1rem" }}>项目活动中</span>
                 <span>
                   仅剩
-                  <span
+                  <b
                     style={{
                       fontSize: "2rem",
                       margin: ".5rem",
@@ -37,7 +37,7 @@ const IndexPage = () => {
                     }}
                   >
                     20
-                  </span>
+                  </b>
                   天
                 </span>
               </p>

@@ -29,6 +29,7 @@ const Navbar = () => {
         <div className={show ? "nav-links nav-links-show" : "nav-links"}>
           {links.map((link) => (
             <Link
+              key={link.url}
               to={link.url}
               className="nav-link"
               activeClassName="nav-link-active"
