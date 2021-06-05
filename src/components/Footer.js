@@ -27,12 +27,8 @@ const Footer = () => {
           <dl key={index}>
             <dt>{group.columnTitle}</dt>
             {group.links.map((link, index) => (
-              <dd>
-                <Link
-                  key={index}
-                  to={link.to}
-                  activeClassName="footer-link-active"
-                >
+              <dd key={index}>
+                <Link to={link.to} activeClassName="footer-link-active">
                   {link.name}
                 </Link>
               </dd>

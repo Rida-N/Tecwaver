@@ -14,9 +14,11 @@ const IndexPage = () => {
       <Seo title="为沃互联" />
       <main className="page">
         <Banner />
-        <Intro />
-        <Services />
-        <News />
+        <div className="page-content">
+          <Intro />
+          <Services />
+          <News />
+        </div>
       </main>
     </Layout>
   );
