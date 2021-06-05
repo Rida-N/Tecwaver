@@ -20,7 +20,6 @@ const query = graphql`
 
 const Footer = () => {
   const footerLinks = useStaticQuery(query).site.siteMetadata.footerLinks;
-  console.log(footerLinks);
   return (
     <footer className="footer">
       <div className="footer-container">
