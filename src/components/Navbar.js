@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
+
 import { FcMenu } from "react-icons/fc";
-import logo from "/src/assets/images/logo-long.png";
+import { BiSearch } from "react-icons/bi";
 
 const links = [
-  { text: "首页", url: "/" },
   { text: "服务与解决方案", url: "/services" },
   { text: "产品", url: "/products" },
   { text: "客户案例", url: "/examples" },
   { text: "关于", url: "/about" },
   { text: "加入我们", url: "/join" },
-  { text: "联系", url: "/contact" },
+  { text: "联系我们", url: "/contact" },
 ];
 
 const Navbar = () => {
@@ -20,13 +21,26 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">
-            <img src={logo} alt="tecwaver logo" />
+            <StaticImage
+              className="nav-logo"
+              src="../assets/images/logo-long.png"
+              alt="tecwaver logo"
+            />
           </Link>
-          <button className="nav-btn" onClick={() => setShow(!show)}>
+          <button className="nav-menuBtn" onClick={() => setShow(!show)}>
             <FcMenu />
           </button>
         </div>
         <div className={show ? "nav-links nav-links-show" : "nav-links"}>
+          <Link
+            to="/"
+            className="nav-link"
+            activeClassName="nav-link-active"
+            onClick={() => setShow(false)}
+          >
+            首页
+          </Link>
+          <span className="nav-split"></span>
           {links.map((link) => (
             <Link
               key={link.url}
@@ -38,6 +52,11 @@ const Navbar = () => {
               {link.text}
             </Link>
           ))}
+          <span className="nav-split"></span>
+
+          <button className="small plain nav-link" onClick={() => {}}>
+            <BiSearch />
+          </button>
         </div>
       </div>
     </nav>

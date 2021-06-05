@@ -1,26 +1,46 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
-import styled from "styled-components";
+import { Link } from "gatsby";
 
 const query = graphql`
   {
     site {
       siteMetadata {
-        footerLinks
+        footerLinks {
+          columnTitle
+          links {
+            to
+            name
+          }
+        }
       }
     }
   }
 `;
 
 const Footer = () => {
-  // const footerLinks = useStaticQuery(query).siteMetadata.footerLinks;
-  // console.log(footerLinks);
+  const footerLinks = useStaticQuery(query).site.siteMetadata.footerLinks;
+  console.log(footerLinks);
   return (
-    <footer>
-      {/* <section top>
-        <h5>合作伙伴</h5>
-      </section> */}
-      <section></section>
+    <footer className="footer">
+      <div className="footer-container">
+        {footerLinks.map((group, index) => (
+          <dl key={index}>
+            <dt>{group.columnTitle}</dt>
+            {group.links.map((link, index) => (
+              <dd>
+                <Link
+                  key={index}
+                  to={link.to}
+                  activeClassName="footer-link-active"
+                >
+                  {link.name}
+                </Link>
+              </dd>
+            ))}
+          </dl>
+        ))}
+      </div>
     </footer>
   );
 };
