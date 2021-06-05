@@ -24,7 +24,7 @@ module.exports = {
         links: [
           { to: "", name: "远程动力" },
           { to: "", name: "网上自习室" },
-          { to: "", name: "咨询平台" },
+          { to: "", name: "立刻问（咨询平台）" },
         ],
       },
       // {

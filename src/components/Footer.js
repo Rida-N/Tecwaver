@@ -36,6 +36,13 @@ const Footer = () => {
           </dl>
         ))}
       </div>
+      <div className="footer-copyright">
+        <span>
+          Copyright © {new Date().getFullYear()} 为沃互联科技有限公司 ALL RIGHTS
+          RESERVED.
+        </span>
+        <span>联系方式: contact@tecwaver.com</span>
+      </div>
     </footer>
   );
 };
