@@ -69,7 +69,7 @@ const Services = () => {
           className="article-img"
           src="../../assets/images/banner/5.jpeg"
           alt="Offshore outsourcing"
-          placeholder="tracedSVG"
+          placeholder="blurred"
           layout="fullWidth"
         />
         <article>

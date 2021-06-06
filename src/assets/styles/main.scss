@@ -510,6 +510,9 @@ form > *:last-child {
     margin: 3rem auto;
     section {
       height: 25rem;
+      @media screen and (max-width: 30rem) {
+        height: 28rem; //小屏幕扩大显示图片区域
+      }
       background-color: white;
       margin: auto;
       display: grid;
@@ -539,8 +542,10 @@ form > *:last-child {
         border-top: 0.01rem solid var(--grey-300);
         font-size: 0.9rem;
       }
-      &-img img {
-        filter: grayscale(70%) opacity(85%);
+      &-img {
+        img {
+          filter: grayscale(70%) opacity(85%);
+        }
       }
     }
   }
