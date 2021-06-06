@@ -20,14 +20,18 @@ const Services = () => {
         <StaticImage
           className="article-img"
           src="../../assets/images/banner/2.jpeg"
-          alt="digital market"
+          alt="Digital Market"
+          placeholder="tracedSVG"
+          layout="fullWidth"
         />
       </section>
       <section>
         <StaticImage
           className="article-img"
           src="../../assets/images/banner/1.jpeg"
-          alt="digital market"
+          alt="Plateform Development"
+          placeholder="tracedSVG"
+          layout="fullWidth"
         />
         <article>
           <h5>企业及机构平台构建</h5>
@@ -55,14 +59,18 @@ const Services = () => {
         <StaticImage
           className="article-img"
           src="../../assets/images/banner/3.jpeg"
-          alt="digital market"
+          alt="Industry Solutions"
+          placeholder="tracedSVG"
+          layout="fullWidth"
         />
       </section>
       <section>
         <StaticImage
           className="article-img"
           src="../../assets/images/banner/5.jpeg"
-          alt="digital market"
+          alt="Offshore outsourcing"
+          placeholder="tracedSVG"
+          layout="fullWidth"
         />
         <article>
           <h5>离岸外包</h5>
